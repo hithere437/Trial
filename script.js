@@ -1,7 +1,6 @@
 // Name checking
 function checkName() {
-  let input = document.getElementById("nameInput").value.trim();
-  input.toLowerCase();
+  const input = document.getElementById("nameInput").value.trim().toLowerCase();
   const errorMsg = document.getElementById("errorMsg");
 
   const correctName = "fatah";
@@ -24,5 +23,6 @@ function goTo(page) {
     window.location.href = "index.html";
   }
 }
+
 
 
