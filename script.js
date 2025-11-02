@@ -1,13 +1,13 @@
 // Name checking
 function checkName() {
-  const input = document.getElementById("nameInput").value.trim();
+  let input = document.getElementById("nameInput").value.trim();
+  input.toLowerCase();
   const errorMsg = document.getElementById("errorMsg");
 
-  // Change "John" to the allowed name you want
-  const correctName = "Fatah";
+  const correctName = "fatah";
 
   if (input === correctName) {
-    // Save the fact that user is allowed
+    
     localStorage.setItem("access", "granted");
     window.location.href = "choice.html";
   } else {
@@ -17,7 +17,6 @@ function checkName() {
 
 // Navigation
 function goTo(page) {
-  // Make sure user had access
   if (localStorage.getItem("access") === "granted") {
     window.location.href = page;
   } else {
@@ -25,4 +24,5 @@ function goTo(page) {
     window.location.href = "index.html";
   }
 }
+
 
